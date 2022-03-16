@@ -42,7 +42,7 @@ app.get( "/addmovie", ( req, res ) => {
 app.post( "/addmovie", ( req, res ) => {
     const newMovie = { id: new Date().now, title: req.body.title, director: req.body.director, year: req.body.year };
     movies = [ ...movies, newMovie ];
-    res.redirect( "/" );
+    res.redirect( "/movies" );
 });
 
 //Customers
