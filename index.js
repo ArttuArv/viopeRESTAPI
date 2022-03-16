@@ -23,14 +23,12 @@ let customers = [
     {id: '1588323375418', firstname: 'Peter', lastname: 'North', email: 'peter@north.com', phone: '901176'},
 ];
 
-app.get( "/hello", ( req, res ) => {
-    res.render( "hello", { firstname: 'John', lastname: 'Rambo' } );   
-});
-
+// api guide
 app.get( "/", ( req, res) => {
     res.render( "menu" );
 });
 
+// movies
 app.get( "/movies", ( req, res ) => {
     res.render( "movielist", { movies: movies } );
 });
