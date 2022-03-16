@@ -27,7 +27,11 @@ app.get( "/hello", ( req, res ) => {
     res.render( "hello", { firstname: 'John', lastname: 'Rambo' } );   
 });
 
-app.get( "/", ( req, res ) => {
+app.get( "/", ( req, res) => {
+    res.render( "menu" );
+});
+
+app.get( "/movies", ( req, res ) => {
     res.render( "movielist", { movies: movies } );
 });
 
